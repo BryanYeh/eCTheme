@@ -2,15 +2,74 @@ body{
   background-color: #f0f0f0;
 }
 
+/*
+** Top Bar
+*/
 .top-bar{
   background-color: #80f2f3;
 }
 
+/*
+** navbar
+*/
 .navbar{
   padding-right: 15px;
   padding-left: 15px;
   border-radius: 0;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.marginBottom-0 {
+	margin-bottom:0;
+}
+.dropdown-submenu{
+	position:relative;
+}
+.dropdown-submenu>.dropdown-menu{
+	top:0;
+	left:100%;
+	margin-top:-6px;
+	margin-left:14px;
+	-webkit-border-radius:0 6px 6px 6px;
+	-moz-border-radius:0 6px 6px 6px;
+	border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu>a:after{
+	position: relative;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	display:block;
+	content:" ";
+	float:right;
+	width:0;
+	height:0;
+	content: "\2b";
+	right: 10px;
+	font-size: 10px;
+	margin-top: 2px;
+}
+.dropdown-submenu.open>a:after{
+	content: "\2212";
+}
+.dropdown-submenu:hover>a:after{
+	border-left-color:#555;
+}
+.dropdown-submenu.pull-left{
+	float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu{
+	left:-100%;
+	margin-left:10px;
+	-webkit-border-radius:6px 0 6px 6px;
+	-moz-border-radius:6px 0 6px 6px;
+	border-radius:6px 0 6px 6px;
+}
+.glyphicon2x{
+	float: right;
 }
 @media (min-width: 768px){
   .navbar-header{
@@ -19,8 +78,74 @@ body{
   .navbar-nav>li>a{
     padding: 25px;
   }
+  .glyphicon2x{
+  	float: none;
+  }
+  li.dropdown.dropdown-submenu.open>.dropdown-menu{
+		margin-left: 0;
+	}
+}
+a[aria-expanded=true] .glyphicon-plus {
+   display: none;
+}
+a[aria-expanded=false] .glyphicon-minus {
+   display: none;
+}
+.navbar-toggle{
+	background-color: #ffffff;
+}
+.navbar-toggle .icon-bar{
+	background-color: #000000;
+}
+.navbar-brand{
+		display: none;
+}
+.navbar-collapse{
+	padding-left: 0;
+}
+@media(max-width: 768px){
+	.navbar-brand{
+		display: inline;
+	}
+	.navbar-collapse{
+		padding-left: 15px;
+	}
+}
+.navbar-toggle {
+  border: none;
+  background: transparent !important;
+}
+.navbar-toggle:hover {
+  background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+  width: 22px;
+  transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+  opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+.navbar-toggle.collapsed .top-bar {
+  transform: rotate(0);
+}
+.navbar-toggle.collapsed .middle-bar {
+  opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+  transform: rotate(0);
 }
 
+/*
+** Featured
+*/
 .featured,
 .product{
   margin-top: 20px;
